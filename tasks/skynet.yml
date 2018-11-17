@@ -11,11 +11,6 @@
     - python-mysqldb
     - supervisor
 
-- name: Install Cement
-  pip:
-    name: cement
-    state: present
-
 - name: Allow 'aegir' user to restart Skynet queue
   copy:
     dest: "/etc/sudoers.d/{{ aegir_user }}-skynet"
